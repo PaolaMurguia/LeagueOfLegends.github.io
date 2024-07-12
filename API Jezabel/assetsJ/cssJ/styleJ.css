@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../filesJ/background.gif");  
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top:7rem; 
+}
+
+button img {
+    width: 250px; 
+    height: auto;
+    transition: transform 0.3s;
+}
+
+button:hover img {
+    transform: scale(1.2); 
+}
