@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,6 +16,11 @@ body {
     min-width: 100vw;
     display: flex;
     justify-content: center;
+}
+
+body.different-background {
+    background-image: none; 
+    background-color: #9c4a58; 
 }
 
 button {
@@ -31,4 +39,113 @@ button img {
 
 button:hover img {
     transform: scale(1.2); 
+}
+
+main{
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.pokemon-todos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+}
+@media  screen and (min-width:470px) {
+    .pokemon-todos{
+        grid-template-columns:1fr 1fr;
+    }
+}
+@media  screen and (min-width:700px) {
+    .pokemon-todos{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+
+.pokemon-wrapper {
+    position: relative;
+    box-shadow: 0 0 4rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.pokemon {
+    background-color: white;
+    border: solid 3px black;
+    box-shadow: 0 0 5rem -1rem;
+    text-transform: uppercase;
+    position: relative;
+    isolation: isolate;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: visible;
+}
+
+.pokemon-id-back{
+    position:absolute;
+    top: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    font-weight: 950;
+    font-family: sans-serif;
+    color: rgb(160, 160, 160);
+    letter-spacing: 0.2rem;
+    font-style: oblique;
+}
+
+.pokemon-imagen{
+    padding-inline: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.pokemon-imagen img{
+    width: 100%;
+    max-width: 13rem;
+}
+.pokemon-info {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;    
+    letter-spacing: 1rem;
+}
+
+.nombre-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.pokemon-nombre {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: 'Reggae One', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.pokeboton {
+    position:absolute; 
+    top: -4.6rem; 
+    left: -3.5rem;
+    background-color: white; 
+    border: 3px solid black; 
+    padding: 0.2rem 3rem; 
+    font-family: 'Lora'; 
+    font-size: 1.2rem; 
+    font-weight: bold;
+    z-index: 10; 
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 0.15rem;
+    cursor: pointer; 
+    transition: background-color 0.2s, transform 0.2s; 
+}
+
+.pokeboton:hover {
+    transform: scale(1.02);
 }
