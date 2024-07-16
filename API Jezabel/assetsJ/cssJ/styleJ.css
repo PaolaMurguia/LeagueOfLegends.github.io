@@ -20,7 +20,7 @@ body {
 
 body.different-background {
     background-image: none; 
-    background-color: #9c4a58; 
+    background-color: #a75663; 
 }
 
 button {
@@ -64,7 +64,7 @@ main{
 
 .pokemon-wrapper {
     position: relative;
-    box-shadow: 0 0 4rem -1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1rem -1rem rgba(37, 7, 7, 0.5);
 }
 
 .pokemon {
@@ -74,7 +74,7 @@ main{
     text-transform: uppercase;
     position: relative;
     isolation: isolate;
-    height: 280px;
+    height: 290px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -131,11 +131,12 @@ main{
 
 .pokeboton {
     position:absolute; 
-    top: -4.6rem; 
+    top: -4.4rem; 
     left: -3.5rem;
     background-color: white; 
     border: 3px solid black; 
-    padding: 0.2rem 3rem; 
+    padding: 0.2rem; 
+    width: 13rem;
     font-family: 'Lora'; 
     font-size: 1.2rem; 
     font-weight: bold;
@@ -144,8 +145,95 @@ main{
     letter-spacing: 0.15rem;
     cursor: pointer; 
     transition: background-color 0.2s, transform 0.2s; 
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .pokeboton:hover {
     transform: scale(1.02);
+}
+
+
+.normal {
+    background-color: #A8A878; /* Gris */
+}
+
+.fire {
+    background-color: #F08030; /* Naranja */
+
+}
+
+.water {
+    background-color: #6890F0; /* Azul */
+}
+
+.electric {
+    background-color: #FFD700; /* Amarillo */
+}
+
+.grass {
+    background-color: #78C850; /* Verde */
+
+}
+
+.ice {
+    background-color: #98D8D8; /* Celeste */
+
+}
+
+.fighting {
+    background-color: #C03028; /* Rojo oscuro */
+}
+
+.poison {
+    background-color: #A040A0; /* Violeta */
+
+}
+
+.ground {
+    background-color: #E0C068; /* Marrón */
+
+}
+
+.flying {
+    background-color: #A890F0; /* Morado */
+
+}
+
+.psychic {
+    background-color: #F85888; /* Rosa */
+
+}
+
+.bug {
+    background-color: #A8B820; /* Verde claro */
+
+}
+
+.rock {
+    background-color: #B8A038; /* Marrón claro */
+
+}
+
+.ghost {
+    background-color: #705898; /* Púrpura */
+
+}
+
+.dragon {
+    background-color: #7038F8; /* Azul oscuro */
+
+}
+
+.dark {
+    background-color: #705848; /* Gris oscuro */
+}
+
+.steel {
+    background-color: #B8B8D0; /* Gris claro */
+}
+
+.fairy {
+    background-color: #EE99AC; /* Rosa claro */
+
 }
