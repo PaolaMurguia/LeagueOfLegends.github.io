@@ -1,4 +1,5 @@
 const listaPokemon = document.querySelector("#listaPokemon");
+const botonesHeader = document.querySelectorAll(".btn-header");
 const URL_BASE = "https://pokeapi.co/api/v2/";
 
 // Array para almacenar los datos de los Pokémon en orden
@@ -41,13 +42,20 @@ async function cargarPokemon() {
 
 // Función para mostrar un Pokémon en la lista
 function mostrarPokemon(poke, nombreJapones, tipoPrincipal) {
-    let pokeId = poke.id.toString().padStart(3, '0'); // Ajustar el ID a tres dígitos con ceros a la izquierda si es necesario
+    //let pokeId = poke.id.toString().padStart(3, '0'); 
+
+    let pokeeId=poke.id.toString();
+    if(pokeeId.length===1){
+        pokeeId="00"+pokeeId;
+    }else if(pokeeId.length===2){
+        pokeeId="0"+pokeeId;
+    }
 
     const div = document.createElement("div");
     div.classList.add("pokemon");
     div.innerHTML = `
     <button class="pokeboton ${tipoPrincipal}">${poke.name}</button>
-    <p class="pokemon-id-back">#${pokeId}</p>
+    <p class="pokemon-id-back">#${pokeeId}</p>
 
     <div class="pokemon-imagen">
         <img src="${poke.sprites.other['official-artwork'].front_default}" alt="${poke.name}">
@@ -66,3 +74,28 @@ function mostrarPokemon(poke, nombreJapones, tipoPrincipal) {
 // Llamar a la función para cargar y mostrar los Pokémon
 cargarPokemon();
 
+
+function mostrarPokemonsFiltrados(tipo) {
+    listaPokemon.innerHTML = ""; // Limpiar la lista
+
+    pokemonData.forEach(pokemon => {
+        const tipoPrincipal = pokemon.types[0].type.name;
+        if (tipo === "ver-todos" || pokemon.types.some(type => type.type.name === tipo)) {
+            const speciesURL = pokemon.species.url;
+
+            fetch(speciesURL)
+                .then(response => response.json())
+                .then(speciesData => {
+                    const nombreJapones = speciesData.names.find(name => name.language.name === 'ja').name;
+                    mostrarPokemon(pokemon, nombreJapones, tipoPrincipal);
+                })
+                .catch(error => console.error('Error fetching species data:', error));
+        }
+    });
+}
+
+// Añadir evento a cada botón
+botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
+    const botonId = event.currentTarget.id;
+    mostrarPokemonsFiltrados(botonId);
+}));

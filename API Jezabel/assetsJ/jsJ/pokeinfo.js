@@ -1,4 +1,5 @@
 const listaPokemon = document.querySelector("#listaPokemon");
+const botonesHeader = document.querySelectorAll(".btn-header");
 const URL_BASE = "https://pokeapi.co/api/v2/";
 
 // Función para cargar y mostrar los datos de los Pokémon
@@ -78,3 +79,40 @@ function mostrarPokemon(poke, tipoPrincipal, tipoIngles, habilidadPrincipal) {
 
 // Llamar a la función para cargar y mostrar los Pokémon
 cargarPokemon();
+
+async function mostrarPokemonsFiltrados(tipo) {
+    listaPokemon.innerHTML = ""; // Limpiar la lista
+
+    try {
+        const responses = await Promise.all(
+            Array.from({ length: 151 }, (_, i) => i + 1).map(async (i) => {
+                const pokemonURL = `${URL_BASE}pokemon/${i}`;
+                const response = await fetch(pokemonURL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+        );
+
+        responses.forEach(async (data) => {
+            const tipoPrincipal = data.types[0].type.name;
+            if (tipo === "ver-info" || tipo === tipoPrincipal) {
+                const tipoURL = data.types[0].type.url;
+                const tipoNombreEspañol = await obtenerNombreEnEspañol(tipoURL);
+                const habilidadURL = data.abilities[0].ability.url;
+                const habilidadNombreEspañol = await obtenerNombreEnEspañol(habilidadURL);
+                mostrarPokemon(data, tipoNombreEspañol, tipoPrincipal, habilidadNombreEspañol);
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching Pokémon data:', error);
+    }
+}
+
+botonesHeader.forEach(boton => {
+    boton.addEventListener("click", (event) => {
+        const botonId = event.currentTarget.id;
+        mostrarPokemonsFiltrados(botonId);
+    });
+});
