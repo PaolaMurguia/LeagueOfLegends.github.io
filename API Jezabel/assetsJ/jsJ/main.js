@@ -65,3 +65,4 @@ function mostrarPokemon(poke, nombreJapones, tipoPrincipal) {
 
 // Llamar a la función para cargar y mostrar los Pokémon
 cargarPokemon();
+
