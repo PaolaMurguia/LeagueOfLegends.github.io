@@ -116,6 +116,9 @@ article:hover {
     margin: 10px 15px;
     color: #f1faee;
 }
+.description  {
+    text-align: justify;
+}
 
 .description p {
     text-align: left;
