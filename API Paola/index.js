@@ -29,7 +29,7 @@ function displayChampions(champions) {
                campeon.image.full
              }" alt="${campeon.name}">
             </div>
-
+            
             <div class="name"> 
               <h2>${campeon.name}</h2>
             </div>
@@ -39,7 +39,7 @@ function displayChampions(champions) {
             </div>
 
             <div class="rol">
-             <p>Rol: ${rolesMap[campeon.tags[0]] || campeon.tags[0]}</p>
+             <p >ROL<soan class= "texto-rol">  ${rolesMap[campeon.tags[0]] || campeon.tags[0]}</span> </p>
             </div>
 
             <div class="description">
@@ -94,4 +94,46 @@ obtenerCaracter((datos) => {
     );
     displayChampions(tanques);
   });
+
+    // Buscador
+    const searchBar = document.getElementById("searchBar");
+    searchBar.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase();
+      const filteredChampions = campeones.filter((campeon) => 
+        campeon.name.toLowerCase().includes(query)
+      );
+      
+      displayChampions(filteredChampions);
+
+    });
+
+
+
+  
+    // Mostrar todos los campeones al cargar la página
+   // displayChampions(campeones);
 });
+
+
+
+// function displayChampionsReverse(champions) {
+//   const main = document.querySelector("main");
+//   champions.forEach((campeon) => {
+//     const article = document.createRange().createContextualFragment(`
+//    <div class="card-back">
+
+  
+
+//     <p>Estadísticas:</p>
+//     <ul>
+//       <li>Daño de ataque: ${campeon.info.attack}</li>
+//       <li>Defensa: ${campeon.info.defense}</li>
+//       <li>Dificultad: ${campeon.info.difficulty}</li>
+//      </ul>
+
+//      `);
+//     main.append(article);
+//   });
+// }
+
+
