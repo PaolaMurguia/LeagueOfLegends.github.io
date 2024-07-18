@@ -33,3 +33,66 @@ Lo que determina que la "historia" está completa:
 
 ## Diseño de la Interfaz de Usuario
 ![Diseño de la Interfaz de Usuario](https://github.com/jezabel7/ProyectoAPI/blob/main/API%20Jezabel/assetsJ/filesJ/Pokedex.jpg)
+
+# PDF Blocks API Client
+
+Esta aplicación web permite a los usuarios interactuar con la API de PDF Blocks para agregar contraseñas, eliminar contraseñas y fusionar archivos PDF. 
+
+## Características
+
+- **Agregar Contraseña a PDF**: Permite a los usuarios agregar una contraseña a un archivo PDF.
+- **Eliminar Contraseña de PDF**: Permite a los usuarios eliminar la contraseña de un archivo PDF protegido.
+- **Fusionar PDFs**: Permite a los usuarios fusionar múltiples archivos PDF en uno solo.
+
+
+## Archivos del Proyecto
+
+- `indexL.html`: El archivo HTML principal que contiene la estructura de la aplicación.
+- `stylesL.css`: El archivo CSS que contiene los estilos de la aplicación.
+- `scriptL.js`: El archivo JavaScript que maneja la lógica de la aplicación.
+
+
+## Detalles de Implementación
+
+### Estructura HTML
+
+El archivo `index.html` contiene:
+
+- Un menú con tres botones grandes para seleccionar la funcionalidad deseada.
+- Tres formularios ocultos que se muestran según la funcionalidad seleccionada.
+- Una lista de archivos modificados que se actualiza con cada operación.
+
+
+### Lógica 
+
+El archivo `script.js` maneja:
+
+- La visibilidad de los formularios.
+- Las solicitudes a la API de PDF Blocks.
+- La actualización de la lista de archivos modificados.
+
+### Ejemplo de Uso
+
+#### Agregar Contraseña a un PDF
+
+1. Haz clic en el botón "Add Password to PDF".
+2. Selecciona un archivo PDF.
+3. Ingresa una contraseña y selecciona un algoritmo de encriptación.
+4. Haz clic en "Add Password".
+
+#### Eliminar Contraseña de un PDF
+
+1. Haz clic en el botón "Remove Password from PDF".
+2. Selecciona un archivo PDF protegido.
+3. Ingresa la contraseña actual.
+4. Haz clic en "Remove Password".
+
+#### Fusionar PDFs
+
+1. Haz clic en el botón "Merge PDFs".
+2. Selecciona múltiples archivos PDF.
+3. Haz clic en "Merge PDFs".
+
+
+
+
