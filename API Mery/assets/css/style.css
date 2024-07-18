@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Zilla Slab", serif;
+  background: #ffffff;
+  outline: none;
+  border: none;
+}
+
+.content{
+  display: flex;
+  text-transform: capitalize;
+  font-style: normal;
+  margin: 40px auto;
+  font-size: 20px;
+  font-weight: bolder;
+  justify-content: center;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    /*width: 90%;*/
+    margin: 5% auto;
+}
+.search input{
+  padding: 0.5rem 1rem;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  background: #f2ce04;
+  border-radius: 10px;
+  height: 40px;
+  width: 60%;
+  box-shadow: inset 2px 2px 5px #f2ce04, inset -5px -5px 10px rgba(255, 255, 255, 0);
+
+}
+.search button{
+  margin-left: 40px;
+  background: #59fe90;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #d2d2d2, -5px -5px 10px rgb(243, 243, 243);
+
+}
+.search button .search{
+    color: white;
+    border-radius: 5px;
+    background: #59fe90;
+    font-size: 30px;
+    padding: 0.5rem;
+}
+.search button .favorito{
+    color: white;
+    border-radius: 5px;
+    background: #59fe90;
+    font-size: 30px;
+    padding: 0.5rem;
+}
+
+
+.mostrarComida{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mostrarComida .comidaa{
+  margin: 10px;
+  padding: 1rem;
+  border-radius: 20px;
+  background: #c60303;
+  box-shadow: 2px 2px 5px #0931c2, -5px -5px 10px rgba(9, 181, 41, 0.451);
+
+}
+.mostrarComida .comidaa img{
+  width: 190px;
+  border-radius: 10px;
+}
+.mostrarComida .comidaa .wrapper{
+  display: flex;
+  justify-content: center;
+}
+.mostrarComida .comidaa .wrapper h3{
+    padding: 0.5rem;
+    display: flex;
+    margin-top: 14px;
+    font-size: 15px;
+    justify-content: left;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px #f013b2, inset -5px -5px 10px rgba(28, 92, 252, 0.451);
+  
+}
+.mostrarComida .comidaa .wrapper button{}
+.mostrarComida .comidaa .wrapper button .fav{}
+.mostrarComida .comidaDetalless{}
+.mostrarComida .comidaDetalless img{}
+.mostrarComida .comidaDetalless .detalleWrapper{}
+.mostrarComida .comidaDetalless .detalleWrapper p{}
+.mostrarComida .comidaDetalless .detalleWrapper ul li{}
+.mostrarComida .comidaDetalless .detalleWrapper button{}
+
+h2 {}
+
+.agregar .fav, .eliminar.selected .fav{}
+
+.agregar.selected .fav,  .eliminar.selected .fav
+
+
+
