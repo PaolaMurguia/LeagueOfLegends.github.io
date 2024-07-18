@@ -5,6 +5,7 @@ const URL_BASE = "https://pokeapi.co/api/v2/";
 // Función para cargar y mostrar los datos de los Pokémon
 async function cargarPokemon() {
     try {
+
         // Hacer las solicitudes para obtener los datos de los primeros 151 Pokémon
         for (let i = 1; i <= 151; i++) {
             const pokemonURL = `${URL_BASE}pokemon/${i}`;
@@ -49,7 +50,7 @@ async function obtenerNombreEnEspañol(url) {
 
 // Función para mostrar un Pokémon en la lista
 function mostrarPokemon(poke, tipoPrincipal, tipoIngles, habilidadPrincipal) {
-    let pokeId = poke.id.toString().padStart(3, '0'); // Ajustar el ID a tres dígitos con ceros a la izquierda si es necesario
+    let pokeId = poke.id.toString().padStart(3, '0'); 
 
     const div = document.createElement("div");
     div.classList.add("pokemon1");
@@ -75,13 +76,25 @@ function mostrarPokemon(poke, tipoPrincipal, tipoIngles, habilidadPrincipal) {
         </div>
     `;
     listaPokemon.appendChild(div);
+
+    const boton = div.querySelector(".pokeboton");
+    boton.addEventListener("click", () => {
+        reproducirLlantoPokemon(poke.id);
+    });
+}
+
+
+// Función para reproducir el llanto del Pokémon
+function reproducirLlantoPokemon(id) {
+    const audio = new Audio(`https://pokemoncries.com/cries/${id}.mp3`);
+    audio.play();
 }
 
 // Llamar a la función para cargar y mostrar los Pokémon
 cargarPokemon();
 
 async function mostrarPokemonsFiltrados(tipo) {
-    listaPokemon.innerHTML = ""; // Limpiar la lista
+    listaPokemon.innerHTML = ""; 
 
     try {
         const responses = await Promise.all(

@@ -8,6 +8,7 @@ const pokemonData = [];
 // Función para cargar y mostrar los datos de los Pokémon
 async function cargarPokemon() {
     try {
+
         // Hacer las solicitudes para obtener los datos de los primeros 151 Pokémon
         for (let i = 1; i <= 151; i++) {
             const pokemonURL = `${URL_BASE}pokemon/${i}`;
@@ -16,7 +17,7 @@ async function cargarPokemon() {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             const data = await response.json();
-            pokemonData.push(data); // Almacenar datos del Pokémon en el array
+            pokemonData.push(data); 
         }
 
         // Hacer las solicitudes para obtener los nombres en japonés de los Pokémon
@@ -42,20 +43,13 @@ async function cargarPokemon() {
 
 // Función para mostrar un Pokémon en la lista
 function mostrarPokemon(poke, nombreJapones, tipoPrincipal) {
-    //let pokeId = poke.id.toString().padStart(3, '0'); 
-
-    let pokeeId=poke.id.toString();
-    if(pokeeId.length===1){
-        pokeeId="00"+pokeeId;
-    }else if(pokeeId.length===2){
-        pokeeId="0"+pokeeId;
-    }
+    let pokeId = poke.id.toString().padStart(3, '0');
 
     const div = document.createElement("div");
     div.classList.add("pokemon");
     div.innerHTML = `
-    <button class="pokeboton ${tipoPrincipal}">${poke.name}</button>
-    <p class="pokemon-id-back">#${pokeeId}</p>
+    <button class="pokeboton ${tipoPrincipal}" data-id="${poke.id}">${poke.name}</button>
+    <p class="pokemon-id-back">#${pokeId}</p>
 
     <div class="pokemon-imagen">
         <img src="${poke.sprites.other['official-artwork'].front_default}" alt="${poke.name}">
@@ -68,15 +62,25 @@ function mostrarPokemon(poke, nombreJapones, tipoPrincipal) {
     </div>
     `;
     listaPokemon.appendChild(div);
+
+    // Añadir evento para reproducir el llanto del Pokémon
+    const boton = div.querySelector(".pokeboton");
+    boton.addEventListener("click", () => {
+        reproducirLlantoPokemon(poke.id);
+    });
 }
 
+// Función para reproducir el llanto del Pokémon
+function reproducirLlantoPokemon(id) {
+    const audio = new Audio(`https://pokemoncries.com/cries/${id}.mp3`);
+    audio.play();
+}
 
 // Llamar a la función para cargar y mostrar los Pokémon
 cargarPokemon();
 
-
 function mostrarPokemonsFiltrados(tipo) {
-    listaPokemon.innerHTML = ""; // Limpiar la lista
+    listaPokemon.innerHTML = "";
 
     pokemonData.forEach(pokemon => {
         const tipoPrincipal = pokemon.types[0].type.name;
@@ -94,7 +98,7 @@ function mostrarPokemonsFiltrados(tipo) {
     });
 }
 
-// Añadir evento a cada botón
+// Añadir evento a cada botón del header
 botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
     const botonId = event.currentTarget.id;
     mostrarPokemonsFiltrados(botonId);
