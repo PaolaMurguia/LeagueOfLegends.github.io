@@ -39,7 +39,7 @@ function displayChampions(champions) {
             </div>
 
             <div class="rol">
-             <p>Rol: ${rolesMap[campeon.tags[0]] || campeon.tags[0]}</p>
+             <p >ROL<soan class= "texto-rol">  ${rolesMap[campeon.tags[0]] || campeon.tags[0]}</span> </p>
             </div>
 
             <div class="description">

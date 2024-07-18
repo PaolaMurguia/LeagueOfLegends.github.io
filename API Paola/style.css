@@ -8,7 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0e1dd;
+    background-color: #cac6c6;
     color: #0d1b2a;
 }
 
@@ -18,6 +18,7 @@ header.portal {
     align-items: center;
     padding: 20px;
     background-color: #0d1423;
+    /* background-color: #000; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -61,8 +62,10 @@ header div button:hover {
 }
 
 .campeon h1 {
-    font-size: 50px;
+    font-size: 70px;
     color: #0d1b2a;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .contenido {
@@ -99,31 +102,43 @@ article:hover {
     height: auto;
 }
 
+
 .name h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px 0;
     color: #e0e1dd;
+    text-transform: uppercase;
+    font-style: italic;
+
 }
 
-.title h5 {
+.title h5, .texto-rol {
     font-size: 14px;
     margin: 5px 0;
     color: #c8aa6e;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+   
 }
 
 .rol p, .description p {
     font-size: 14px;
     margin: 10px 15px;
-    color: #f1faee;
+    color: #FFFF;
+    
 }
+
+
 .description  {
     text-align: justify;
 }
 
 .description p {
     text-align: left;
-    color: #a8dadc;
+    color: #FFFF;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
