@@ -45,6 +45,7 @@ button:hover img {
     background-color: transparent;
     border: none;
     padding: 0;
+    cursor: pointer;
 }
 
 main{
