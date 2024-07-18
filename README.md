@@ -32,4 +32,4 @@ Lo que determina que la "historia" está completa:
 - El código JavaScript funciona de la mejor manera para mostrar los Pokémon de manera ordenada en base a lo que se pide.
 
 ## Diseño de la Interfaz de Usuario
-![Diseño de la Interfaz de Usuario](../ProyectoAPI/API%20Jezabel/assetsJ/filesJ/Pokedex.jpg)
+![Diseño de la Interfaz de Usuario](https://github.com/jezabel7/ProyectoAPI/blob/main/API%20Jezabel/assetsJ/filesJ/Pokedex.jpg)
