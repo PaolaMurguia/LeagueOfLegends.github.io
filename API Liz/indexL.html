@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF API</title>
+    <link rel="stylesheet" href="assetsL/cssL/stylesL.css">
+</head>
+<body>
+    <h1>API MODIFICADOR DE PDFs</h1>
+    <div class="menu">
+        <button id="addPasswordBtn">Añadir contraseña a un PDF</button>
+        <button id="removePasswordBtn">Eliminar contraseña a un PDF</button>
+        <button id="mergePdfsBtn">Combinar PDFs</button>
+    </div>
+
+    <div class="form-container" id="addPasswordFormContainer">
+        <form id="addPasswordForm">
+            <label for="fileToAddPassword">Choose PDF:</label>
+            <input type="file" id="fileToAddPassword" name="fileToAddPassword" required>
+            <br>
+            <label for="passwordToAdd">Password:</label>
+            <input type="password" id="passwordToAdd" name="passwordToAdd" required>
+            <br>
+            <label for="encryptionAlgorithm">Encryption Algorithm:</label>
+            <select id="encryptionAlgorithm" name="encryptionAlgorithm">
+                <option value="AES-128">AES-128</option>
+                <option value="AES-256">AES-256</option>
+            </select>
+            <br>
+            <button type="submit">Add Password</button>
+        </form>
+    </div>
+
+    <div class="form-container" id="removePasswordFormContainer">
+        <form id="removePasswordForm">
+            <label for="fileToRemovePassword">Choose PDF:</label>
+            <input type="file" id="fileToRemovePassword" name="fileToRemovePassword" required>
+            <br>
+            <label for="currentPassword">Current Password:</label>
+            <input type="password" id="currentPassword" name="currentPassword" required>
+            <br>
+            <button type="submit">Remove Password</button>
+        </form>
+    </div>
+
+    <div class="form-container" id="mergeFormContainer">
+        <form id="mergeForm">
+            <label for="filesToMerge">Choose PDFs to Merge:</label>
+            <input type="file" id="filesToMerge" name="filesToMerge" multiple required>
+            <br>
+            <button type="submit">Merge PDFs</button>
+        </form>
+    </div>
+
+    <div class="file-list">
+        <h2>Archivos Modificados</h2>
+        <ul id="fileList">
+            <!-- aqui se añadiran los archivos modificados -->
+        </ul>
+    </div>
+
+    <script src="./assetsL/jsL/scriptL.js"></script>
+</body>
+</html>
