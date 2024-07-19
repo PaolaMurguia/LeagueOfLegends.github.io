@@ -22,6 +22,7 @@
 .search{
     display: flex;
     justify-content: center;
+    
     /*width: 90%;*/
     margin: 5% auto;
 }
@@ -30,31 +31,31 @@
   font-size: 30px;
   text-transform: capitalize;
   font-weight: bolder;
-  background: #f2ce04;
+  background: #d3d9ff;
   border-radius: 10px;
   height: 40px;
   width: 60%;
-  box-shadow: inset 2px 2px 5px #f2ce04, inset -5px -5px 10px rgba(255, 255, 255, 0);
+  box-shadow: inset 2px 2px 5px #91919200,inset 2px 2px 5px #afaead00;
 
 }
 .search button{
   margin-left: 40px;
-  background: #59fe90;
+  background: #007bff;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px #d2d2d2, -5px -5px 10px rgb(243, 243, 243);
+  box-shadow: 2px 2px 5px #9a9a9a, -5px -5px 10px rgb(223, 223, 223);
 
 }
 .search button .search{
     color: white;
     border-radius: 5px;
-    background: #59fe90;
+    background: #007bff;
     font-size: 30px;
     padding: 0.5rem;
 }
 .search button .favorito{
     color: white;
     border-radius: 5px;
-    background: #59fe90;
+    background: #007bff;
     font-size: 30px;
     padding: 0.5rem;
 }
@@ -70,8 +71,8 @@
   margin: 10px;
   padding: 1rem;
   border-radius: 20px;
-  background: #c60303;
-  box-shadow: 2px 2px 5px #0931c2, -5px -5px 10px rgba(9, 181, 41, 0.451);
+  background: #ffffff;
+  box-shadow: 2px 2px 5px #b4b4b4, -5px -5px 10px rgba(231, 231, 231, 0.451);
 
 }
 .mostrarComida .comidaa img{
@@ -87,24 +88,81 @@
     display: flex;
     margin-top: 14px;
     font-size: 15px;
-    justify-content: left;
+    justify-content: right;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 5px #f013b2, inset -5px -5px 10px rgba(28, 92, 252, 0.451);
+    box-shadow: inset 2px 2px 5px #ffffff, inset -5px -5px 10px rgb(255, 255, 255);
   
 }
-.mostrarComida .comidaa .wrapper button{}
-.mostrarComida .comidaa .wrapper button .fav{}
-.mostrarComida .comidaDetalless{}
-.mostrarComida .comidaDetalless img{}
-.mostrarComida .comidaDetalless .detalleWrapper{}
-.mostrarComida .comidaDetalless .detalleWrapper p{}
-.mostrarComida .comidaDetalless .detalleWrapper ul li{}
-.mostrarComida .comidaDetalless .detalleWrapper button{}
+.mostrarComida .comidaa .wrapper button{
+  font-size: 25px;
+  padding: 0.3rem;
+  height: 40px;
+  margin-left:20px;
+  margin-top: 13px;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 5px #ffffff, inset -5px -5px 10px rgb(255, 255, 255);
+}
+.mostrarComida .comidaa .wrapper button .fav{
+  border-radius: 10px;
+}
+.mostrarComida .comidaDetalless{
+  display: flex;
+  background: #dbe9fd00;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #b4b4b4, -5px -5px 10px rgba(231, 231, 231, 0.451);
+}
+.mostrarComida .comidaDetalless img{
+  width: 200;
+  height: 200px;
+  margin: 1rem;
+  border-radius: 10px;
+}
+.mostrarComida .comidaDetalless .detalleWrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 15px 2px 10px 10px;
+}
+.mostrarComida .comidaDetalless .detalleWrapper p{
+  margin: 10px 20px;
+}
+.mostrarComida .comidaDetalless .detalleWrapper ul li{
+  list-style: none;
+  margin: 5px 15px;
+  font-weight: bolder;
+}
+.mostrarComida .comidaDetalless .detalleWrapper button{
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: bolder;
+  background: #f66b30;
+  box-shadow: 2px 2px 5px #0cd582, -5px -5px 10px rgba(255, 255, 255, 0.4509803922);
+}
 
+h2 {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 30px;
+  font-style: italic;
+}
 
-.agregar .fav, .eliminar.selected .fav{}
+.agregar .fav, .eliminar.selected .fav{
+  color: rgb(191, 191, 190);
+}
+
+.agregar.selected .fav,  .eliminar.selected .fav{
+  color: rgb(255, 195, 32);
+
+}
 
 .agregar.selected .fav,  .eliminar.selected .fav{}
+>>>>>>> 144f272274d8dafb41fa677b7afce546fe6f9892
 
 
