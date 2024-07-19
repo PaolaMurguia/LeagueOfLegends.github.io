@@ -1,7 +1,9 @@
-# PokeInfo
+# INFORMACION DE LAS APIs
 
-## Definición del producto
-El prototipo de la página se hizo en Canva para tener una guía de cómo diseñarlo con CSS y HTML. Con la ayuda de las clases de CTC y videos de YouTube, comprendimos cómo enlazar las APIs y cómo hacer consultas. La Pokédex no atiende un "problema" de un usuario sino un "interés" del mismo por la información ordenada de los Pokémon.
+# Pokédex con API Pokemon
+
+## Definición del proyecto
+La Pokédex no atiende un "problema" de un usuario sino un "interés" del mismo por la información ordenada de los Pokémon, permitiendo interactuar para obtener informacion sobre los Pokémon. El prototipo de la página se hizo en Canva para tener una guía de cómo diseñarlo con CSS y HTML. Con la ayuda de las clases de CTC y videos de YouTube, comprendimos cómo enlazar las APIs y cómo hacer consultas. 
 
 ## Historias de usuario
 Las historias de usuario representan todo lo que el usuario necesita hacer/ver. Estas historias son el resultado del proceso de investigación de los usuarios. 
@@ -13,9 +15,9 @@ Los usuarios que deseen ver los datos del API son:
 - Mis usuarios principales serían niños porque tiene una interfaz llamativa y colorida que llama la atención e incentiva la interacción con todos los tipos de Pokémon.
 
 ### Ejemplo de historia de usuario
-Yo como: Aficionado de Pokémon  
-Quiero: Ver más sobre mis personajes favoritos de la serie  
-Para: Aprender y tener información de los Pokémon
+**Yo como:** Aficionado de Pokémon  
+**Quiero:** Ver más sobre mis personajes favoritos de la serie  
+**Para:** Aprender y tener información de los Pokémon
 
 ### Criterios de aceptación
 Lo que debe suceder para considerar que satisface al usuario:
@@ -27,7 +29,7 @@ Lo que debe suceder para considerar que satisface al usuario:
 ### Definición de terminado
 Lo que determina que la "historia" está completa:
 
-- El código de estilos está definido claramente en base a sus clases.
+- El código CSS está definido claramente en base a sus clases.
 - El código HTML es generado por la API de manera rápida.
 - El código JavaScript funciona de la mejor manera para mostrar los Pokémon de manera ordenada en base a lo que se pide.
 
@@ -93,6 +95,23 @@ El archivo `script.js` maneja:
 2. Selecciona múltiples archivos PDF.
 3. Haz clic en "Merge PDFs".
 
+# Recetario con API Meals
+Este proyecto es una aplicación web que permite buscar recetas de comidas utilizando la API de TheMealDB. Los usuarios pueden introducir un ingrediente en inglés y obtener una lista de recetas relacionadas. Además, pueden marcar sus recetas favoritas y ver los detalles de cada receta.
 
+## Características
 
+- **Búsqueda de recetas**: Permite a los usuarios buscar recetas introduciendo un ingrediente en inglés.
+- **Favoritos**: Los usuarios pueden marcar y desmarcar recetas como favoritas.
+- **Detalles de las recetas**: Visualización detallada de la receta seleccionada, incluyendo ingredientes, instrucciones y un enlace a un video tutorial.
 
+## Estructura del proyecto
+
+- Archivo principal HTML que contiene la estructura de la aplicación.
+- Hoja de estilos CSS para la aplicación.
+- Archivo JavaScript que contiene la lógica de la aplicación.
+
+## Uso
+
+- Introduce un ingrediente en inglés en el campo de búsqueda y haz clic en el botón de búsqueda.
+- Marca recetas como favoritas utilizando el botón de estrella.
+- Haz clic en el botón de utensilios para ver los detalles de una receta.
