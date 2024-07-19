@@ -106,15 +106,23 @@ Este proyecto es una aplicación web que permite buscar recetas de comidas utili
 
 ## Estructura del proyecto
 
-- Archivo principal HTML que contiene la estructura de la aplicación.
-- Hoja de estilos CSS para la aplicación.
-- Archivo JavaScript que contiene la lógica de la aplicación.
+- `indexM.html`: estructura principal del proyecto
+- `style.css`:  los estilo de del la estructura HTML
+- `main.j`s: archivo javascript donde se llama al servicio API meal para mostrar datos en la pagina
+
+## API Meal --> Servicio que se utilizo
+
+- **https://www.themealdb.com/api.php**
 
 ## Uso
 
 - Introduce un ingrediente en inglés en el campo de búsqueda y haz clic en el botón de búsqueda.
 - Marca recetas como favoritas utilizando el botón de estrella.
 - Haz clic en el botón de utensilios para ver los detalles de una receta.
+
+## Captura
+![Captura](https://github.com/T800-mry/proyectoAPI/blob/main/API%20Mery/assets/img/captura.jpeg)
+
 
 # ⭐ League of Legends API
 
@@ -144,3 +152,20 @@ Este proyecto es una aplicación web que permite a los usuarios seleccionar y fi
 - CSS
 - JavaScript
 - [Riot Games API](https://developer.riotgames.com/)
+
+
+### Instrucciones para Ejecutar el Proyecto
+
+- paso 1: Clona el repositorio:
+
+Copiar código : git clone https://github.com/T800-mry/proyectoAPI.git
+
+- paso 2: Entra en la carpeta del proyecto:
+
+Copiar código: cd proyectoAPI
+
+- paso 3: Abre el proyecto en Visual Studio Code:
+
+- paso 4: Instala la extensión "Live Server" en VSCode.
+
+Abre el archivo HTML principal y selecciona "Open with Live Server" para ver el proyecto en tu navegador.
