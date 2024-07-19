@@ -1,6 +1,6 @@
 # INFORMACION DE LAS APIs
 
-# <span style="color: red;">Pokédex con API Pokemon </span> 
+# ⭐ Pokédex con API Pokemon
 
 ## Definición del proyecto
 La Pokédex no atiende un "problema" de un usuario sino un "interés" del mismo por la información ordenada de los Pokémon, permitiendo interactuar para obtener informacion sobre los Pokémon. El prototipo de la página se hizo en Canva para tener una guía de cómo diseñarlo con CSS y HTML. Con la ayuda de las clases de CTC y videos de YouTube, comprendimos cómo enlazar las APIs y cómo hacer consultas. 
@@ -36,7 +36,7 @@ Lo que determina que la "historia" está completa:
 ## Diseño de la Interfaz de Usuario
 ![Diseño de la Interfaz de Usuario](https://github.com/jezabel7/ProyectoAPI/blob/main/API%20Jezabel/assetsJ/filesJ/Pokedex.jpg)
 
-# <span style="color: red;">PDF Blocks API Client</span>
+# ⭐ PDF Blocks API Client
 
 Esta aplicación web permite a los usuarios interactuar con la API de PDF Blocks para agregar contraseñas, eliminar contraseñas y fusionar archivos PDF. 
 
@@ -95,7 +95,7 @@ El archivo `script.js` maneja:
 2. Selecciona múltiples archivos PDF.
 3. Haz clic en "Merge PDFs".
 
-# <span style="color: red;">Recetario con API Meals</span>
+# ⭐ Recetario con API Meals
 Este proyecto es una aplicación web que permite buscar recetas de comidas utilizando la API de TheMealDB. Los usuarios pueden introducir un ingrediente en inglés y obtener una lista de recetas relacionadas. Además, pueden marcar sus recetas favoritas y ver los detalles de cada receta.
 
 ## Características
@@ -116,7 +116,7 @@ Este proyecto es una aplicación web que permite buscar recetas de comidas utili
 - Marca recetas como favoritas utilizando el botón de estrella.
 - Haz clic en el botón de utensilios para ver los detalles de una receta.
 
-# <span style="color: red;">League of Legends API</span>
+# ⭐ League of Legends API
 
 Este proyecto es una aplicación web que permite a los usuarios seleccionar y filtrar campeones de League of Legends utilizando la API de Riot Games. Los usuarios pueden buscar campeones por rol o por nombre y ver detalles específicos de cada campeón.
 
