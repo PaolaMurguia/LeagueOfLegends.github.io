@@ -115,3 +115,32 @@ Este proyecto es una aplicación web que permite buscar recetas de comidas utili
 - Introduce un ingrediente en inglés en el campo de búsqueda y haz clic en el botón de búsqueda.
 - Marca recetas como favoritas utilizando el botón de estrella.
 - Haz clic en el botón de utensilios para ver los detalles de una receta.
+
+# League of Legends API
+
+Este proyecto es una aplicación web que permite a los usuarios seleccionar y filtrar campeones de League of Legends utilizando la API de Riot Games. Los usuarios pueden buscar campeones por rol o por nombre y ver detalles específicos de cada campeón.
+
+### Funcionalidades
+
+- **Mostrar todos los campeones**: Permite a los usuarios ver todos los campeones disponibles.
+- **Filtrar por roles**: Los usuarios pueden filtrar campeones por roles (Mago, Asesino, Luchador, Tirador, Tanque).
+- **Buscar por nombre**: Permite a los usuarios buscar campeones por nombre utilizando la barra de búsqueda.
+- **Detalles del campeón**: Muestra una breve descripción, rol y título de cada campeón.
+
+### Estructura del proyecto
+
+- `index.html`: Contiene la estructura de la aplicación.
+- `style.css`: Hoja de estilos para la aplicación.
+- `index.js`: Archivo JavaScript que contiene la lógica de la aplicación.
+
+### Manera de utilizarlo
+
+- Utiliza los botones para filtrar campeones por rol.
+- Utiliza la barra de búsqueda para buscar campeones por nombre.
+
+### Tecnologías
+
+- HTML
+- CSS
+- JavaScript
+- [Riot Games API](https://developer.riotgames.com/)
