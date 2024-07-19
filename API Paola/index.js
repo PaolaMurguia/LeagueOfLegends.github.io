@@ -1,14 +1,15 @@
-function obtenerCaracter(done) {
+function obtenerDatos(don) {
   const results = fetch(
     "https://ddragon.leagueoflegends.com/cdn/14.14.1/data/es_ES/champion.json"
   );
   results
-    .then((response) => response.json())
-    .then((datos) => {
-      done(datos);
+    .then((response) => response.json()) //cuando la soluc. sea completada la dev en formato json
+    .then((datos) => {  //Cuando los datos JSON están listos, se llama a la función don con esos datos.
+      don(datos);
     });
 }
 
+//Define un objeto que mapea los roles en inglés a sus equivalentes en español.
 const rolesMap = {
   Fighter: "Luchador",
   Tank: "Tanque",
@@ -19,15 +20,18 @@ const rolesMap = {
 };
 
 function displayChampions(champions) {
-  const main = document.querySelector("main");
-  main.innerHTML = ""; // Clear previous content
+  const main = document.querySelector("main");  // Selecciona el elemento <main> en el DOM
+
+  main.innerHTML = ""; // Clear previous content main
+  
+   // Itera sobre los campeones y crea el HTML para cada uno
   champions.forEach((campeon) => {
+
+     //string HTML a documentfragment, eficiencia, un fragmento de documento a partir de un string HTML 
     const article = document.createRange().createContextualFragment(`
         <article>
             <div class="img-container">
-             <img src="https://ddragon.leagueoflegends.com/cdn/14.14.1/img/champion/${
-               campeon.image.full
-             }" alt="${campeon.name}">
+             <img src="https://ddragon.leagueoflegends.com/cdn/14.14.1/img/champion/${campeon.image.full}" alt="${campeon.name}">
             </div>
             
             <div class="name"> 
@@ -48,7 +52,7 @@ function displayChampions(champions) {
 
          </article>  
         `);
-    main.append(article);
+    main.append(article); // Añade el fragmento al <main>.
   });
 }
 
@@ -111,7 +115,7 @@ obtenerCaracter((datos) => {
 
   
     // Mostrar todos los campeones al cargar la página
-   // displayChampions(campeones);
+    displayChampions(campeones);
 });
 
 
