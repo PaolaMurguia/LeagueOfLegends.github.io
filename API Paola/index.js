@@ -58,6 +58,7 @@ function displayChampions(champions) {
   });
 }
 
+
 obtenerCaracter((datos) => {   //llama a la funcion 
   const campeones = Object.values(datos.data);    // Convierte los datos de campeones a un arreglo
   document.getElementById("Todos").addEventListener("click", () => {  //Añade eventos de clic a los botones para filtrar campeones según su rol.
