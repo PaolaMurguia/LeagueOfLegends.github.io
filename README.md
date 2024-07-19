@@ -158,7 +158,7 @@ Este proyecto es una aplicación web que permite a los usuarios seleccionar y fi
 
 - paso 1: Clona el repositorio:
 
-Copiar código : git clone https://github.com/T800-mry/proyectoAPI.git
+Copiar código : git clone [](https://github.com/jezabel7/ProyectoAPI.git)
 
 - paso 2: Entra en la carpeta del proyecto:
 
