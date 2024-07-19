@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #cac6c6;
+    color: #0d1b2a;
+    margin: 0;
+    padding: 0;
+}
+
+header.portal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0d1423;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+.contenido {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#champion-details {
+    background-color: #1d3557;
+    border-radius: 8px;
+    padding: 20px;
+    color: #e0e1dd;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.name h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #e0e1dd;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.title h5 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #c8aa6e;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.rol p, .description p, .stats p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #FFFF;
+}
+
+.stats h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #c8aa6e;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #champion-details {
+        max-width: 100%;
+    }
+}
