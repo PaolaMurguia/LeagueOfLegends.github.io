@@ -1,4 +1,4 @@
-function obtenerDatos(don) {
+function obtenerCaracter(don) {
   const results = fetch(
     "https://ddragon.leagueoflegends.com/cdn/14.14.1/data/es_ES/champion.json"
   );
@@ -19,6 +19,7 @@ const rolesMap = {
   Marksman: "Tirador",
 };
 
+//Define una función que toma un arreglo de campeones y los muestra en la página.
 function displayChampions(champions) {
   const main = document.querySelector("main");  // Selecciona el elemento <main> en el DOM
 
@@ -52,20 +53,19 @@ function displayChampions(champions) {
 
          </article>  
         `);
+
     main.append(article); // Añade el fragmento al <main>.
   });
 }
 
-obtenerCaracter((datos) => {
-  const campeones = Object.values(datos.data);
-
-  document.getElementById("Todos").addEventListener("click", () => {
-    const todos = campeones.filter((campeon) => campeon.tags);
-    displayChampions(todos);
+obtenerCaracter((datos) => {   //llama a la funcion 
+  const campeones = Object.values(datos.data);    // Convierte los datos de campeones a un arreglo
+  document.getElementById("Todos").addEventListener("click", () => {  //Añade eventos de clic a los botones para filtrar campeones según su rol.
+    displayChampions(campeones);
   });
 
   document.getElementById("Magos").addEventListener("click", () => {
-    const magos = campeones.filter((campeon) =>
+    const magos = campeones.filter((campeon) => // Filtra todos los campeones según su rol.
       campeon.tags[0].includes("Mage")
     );
     displayChampions(magos);
@@ -100,23 +100,38 @@ obtenerCaracter((datos) => {
   });
 
     // Buscador
-    const searchBar = document.getElementById("searchBar");
-    searchBar.addEventListener("input", (e) => {
-      const query = e.target.value.toLowerCase();
-      const filteredChampions = campeones.filter((campeon) => 
-        campeon.name.toLowerCase().includes(query)
+    const searchBar = document.getElementById("searchBar"); //Selecciona el input del buscador.
+    searchBar.addEventListener("input", (e) => {   //Añade un evento input al buscador.
+      const query = e.target.value.toLowerCase();   //Obtiene el valor del buscador y lo convierte a minúsculas.
+      const filteredChampions = campeones.filter((campeon) => //Filtra los campeones cuyo nombre incluye el valor del buscador.
+        campeon.name.toLowerCase().includes(query) //Muestra los campeones filtrados.
       );
       
-      displayChampions(filteredChampions);
+      displayChampions(filteredChampions); //Muestra todos los campeones al cargar la página.
 
     });
 
-
-
-  
     // Mostrar todos los campeones al cargar la página
     displayChampions(campeones);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -139,5 +154,8 @@ obtenerCaracter((datos) => {
 //     main.append(article);
 //   });
 // }
+
+
+
 
 
