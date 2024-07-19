@@ -110,7 +110,6 @@ obtenerCaracter((datos) => {   //llama a la funcion
       displayChampions(filteredChampions); //Muestra todos los campeones al cargar la página.
 
     });
-
     // Mostrar todos los campeones al cargar la página
     displayChampions(campeones);
 });
